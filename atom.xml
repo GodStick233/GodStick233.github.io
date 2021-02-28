@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://godstick233.github.io</id>
     <title>LeeYin&apos;CLUB</title>
-    <updated>2021-02-28T13:30:33.233Z</updated>
+    <updated>2021-02-28T13:35:49.239Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://godstick233.github.io"/>
     <link rel="self" href="https://godstick233.github.io/atom.xml"/>
@@ -10,4 +10,76 @@
     <logo>https://godstick233.github.io/images/avatar.png</logo>
     <icon>https://godstick233.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, LeeYin&apos;CLUB</rights>
+    <entry>
+        <title type="html"><![CDATA[Python实现实时二维码识别]]></title>
+        <id>https://godstick233.github.io/post/python-shi-xian-shi-shi-er-wei-ma-shi-bie/</id>
+        <link href="https://godstick233.github.io/post/python-shi-xian-shi-shi-er-wei-ma-shi-bie/">
+        </link>
+        <updated>2021-02-28T13:34:42.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1准备工作">1.准备工作</h1>
+<p>首先我们要安装我们本次开发所需要的库opencv和二维码解析库pyzbar<br>
+安装opencv很简单直接:<br>
+<code>pip install opencv-python</code><br>
+然后我们接着安装pyzbar，我这里使用的是Linux系统进行的开发，我这里要多安装一个东西，具体如下：</p>
+<pre><code> sudo apt-get install libzbar0
+ pip install pyzbar 
+</code></pre>
+<p>这样我们本次所需要的环境就搭建好了。</p>
+<h1 id="2码代码">2.码代码</h1>
+<p>首先导入本次所需要的库，最后一个csv是Python自带的csv表格操作库，这里我们需要把我们扫到的二维码信息都存入csv表格里。</p>
+<pre><code>import cv2
+from pyzbar import pyzbar
+import csv
+</code></pre>
+<p>然后我们设置一个变量，来存放我们扫到的二维码信息，我们每次扫描一遍都会要检测扫描到的二维码是不是之前扫描到的，如果没有就存放到这里。接着我们调用opencv的方法来实例化一个摄像头，最后我们设置一些我们存放二维码信息的表格的路径，一定要提前存放一个表格文件哦。</p>
+<pre><code>found = set()
+capture = cv2.VideoCapture(0)
+PATH = &quot;test.csv&quot;
+</code></pre>
+<p>然后我们要写一个死循环，我们要不停的用摄像头来采集二维码，所以我们要在死循环里来写我们的二维码采集的代码。首先我们要用刚才实例化的摄像头来采集实时的照片，然后用pyzbar的函数来解析图片里面是否有二维码</p>
+<pre><code>while(1):
+    ret,frame = capture.read()
+    test = pyzbar.decode(frame)
+</code></pre>
+<p>接着我们要查看我们采集到的二维码是不是之前采集到的，如果不是我们就存放到我们的表格文件里：</p>
+<pre><code>    for tests in test:
+        testdate = tests.data.decode('utf-8')#读取解析到的二维码信息
+        print(testdate)#输出二维码信息
+        if testdate not in found:#判断扫描到的信息是不是之前扫描到的
+            with open(PATH,'a+') as f:
+                csv_write = csv.writer(f)
+                date = [testdate]
+                csv_write.writerow(date)
+            found.add(testdate)#把没有扫描到的二维码信息存放到found变量里
+</code></pre>
+<p>我们可以使用opencv的函数来实时查看摄像头的采集情况，最后再写一个键盘监听，如果我们按下q键就让循环终止，程序停止工作，不然的话会无休止的运作下去。</p>
+<pre><code>    cv2.imshow('Test',frame)
+    if cv2.waitKey(1) == ord('q'):
+        break
+</code></pre>
+<h1 id="3完整代码">3.完整代码</h1>
+<pre><code>import cv2
+from pyzbar import pyzbar
+import csv
+found = set()
+capture = cv2.VideoCapture(0)
+PATH = &quot;test.csv&quot;
+while(1):
+    ret,frame = capture.read()
+    test = pyzbar.decode(frame)
+    for tests in test:
+        testdate = tests.data.decode('utf-8')
+        print(testdate)
+        if testdate not in found:
+            with open(PATH,'a+') as f:
+                csv_write = csv.writer(f)
+                date = [testdate]
+                csv_write.writerow(date)
+            found.add(testdate)
+    cv2.imshow('Test',frame)
+    if cv2.waitKey(1) == ord('q'):
+        break
+</code></pre>
+]]></content>
+    </entry>
 </feed>
