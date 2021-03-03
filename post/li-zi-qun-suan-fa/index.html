@@ -1,22 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://godstick233.github.io</id>
-    <title>LeeYin&apos;CLUB</title>
-    <updated>2021-03-03T12:19:28.990Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://godstick233.github.io"/>
-    <link rel="self" href="https://godstick233.github.io/atom.xml"/>
-    <subtitle>学更多的知识，做自由的灵魂</subtitle>
-    <logo>https://godstick233.github.io/images/avatar.png</logo>
-    <icon>https://godstick233.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, LeeYin&apos;CLUB</rights>
-    <entry>
-        <title type="html"><![CDATA[粒子群算法]]></title>
-        <id>https://godstick233.github.io/post/li-zi-qun-suan-fa/</id>
-        <link href="https://godstick233.github.io/post/li-zi-qun-suan-fa/">
-        </link>
-        <updated>2021-03-03T12:16:55.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="简介">简介</h3>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>粒子群算法 | LeeYin&#39;CLUB</title>
+<meta name="description" content="学更多的知识，做自由的灵魂">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://godstick233.github.io/favicon.ico?v=1614773965110">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://godstick233.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://godstick233.github.io">
+        <img class="avatar" src="https://godstick233.github.io/images/avatar.png?v=1614773965110" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://godstick233.github.io">
+        <h1 class="site-title">LeeYin&#39;CLUB</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">粒子群算法</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-03-03</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://godstick233.github.io/tag/fG3KJw8iE/">
+                    Math
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://godstick233.github.io/tag/3TB4nNque/">
+                    Algorithm
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <h3 id="简介">简介</h3>
 <p>粒子群算法（Particle Swarm Optimization），又称鸟群觅食算法，是由数学家J. Kennedy和R. C. Eberhart等开发出的一种新的进化算法。它是从随机解开始触发，通过迭代寻找出其中的最优解。本算法主要是通过适应度来评价解的分数，比传统的遗传算法更加的简单，它没有传统遗传算法中的“交叉”和“变异”等操作，它主要是追随当前搜索到的最优值来寻找到全局最优值。这种算法实现容易，精度高，收敛快等特点被广泛运用在各个问题中。</p>
 <h3 id="基本思想">基本思想</h3>
 <p>粒子群算法是模拟鸟群觅食的所建立起来的一种智能算法，一开始所有的鸟都不知道食物在哪里，它们通过找到离食物最近的鸟的周围，再去寻找食物，这样不断的追踪，大量的鸟都堆积在食物附近这样找到食物的几率就大大增加了。粒子群就是这样一种模拟鸟群觅食的过程，粒子群把鸟看成一个个粒子，它们拥有两个属性——位置和速度，然后根据自己的这两个属性共享到整个集群中，其他粒子改变飞行方向去找到最近的区域，然后整个集群都聚集在最优解附近，最后最终找到最优解。</p>
@@ -28,78 +115,58 @@
  present[i] = present[i] + v[i] 
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span><br>
 其中pbest是每个粒子搜索到的最优解，gbest是整个群体在一次迭代中搜索到的最优解，v[i]是代表第i个粒子的速度，w代表惯性系数是一个超参数，rang()表示的是在0到1的随机数。Present[i]代表第i个粒子当前的位置。我们通过上面的公式不停的迭代粒子群的状态，最终得到全局最优解</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python实现实时二维码识别]]></title>
-        <id>https://godstick233.github.io/post/python-shi-xian-shi-shi-er-wei-ma-shi-bie/</id>
-        <link href="https://godstick233.github.io/post/python-shi-xian-shi-shi-er-wei-ma-shi-bie/">
-        </link>
-        <updated>2021-02-28T13:34:42.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1准备工作">1.准备工作</h1>
-<p>首先我们要安装我们本次开发所需要的库opencv和二维码解析库pyzbar<br>
-安装opencv很简单直接:<br>
-<code>pip install opencv-python</code><br>
-然后我们接着安装pyzbar，我这里使用的是Linux系统进行的开发，我这里要多安装一个东西，具体如下：</p>
-<pre><code> sudo apt-get install libzbar0
- pip install pyzbar 
-</code></pre>
-<p>这样我们本次所需要的环境就搭建好了。</p>
-<h1 id="2码代码">2.码代码</h1>
-<p>首先导入本次所需要的库，最后一个csv是Python自带的csv表格操作库，这里我们需要把我们扫到的二维码信息都存入csv表格里。</p>
-<pre><code>import cv2
-from pyzbar import pyzbar
-import csv
-</code></pre>
-<p>然后我们设置一个变量，来存放我们扫到的二维码信息，我们每次扫描一遍都会要检测扫描到的二维码是不是之前扫描到的，如果没有就存放到这里。接着我们调用opencv的方法来实例化一个摄像头，最后我们设置一些我们存放二维码信息的表格的路径，一定要提前存放一个表格文件哦。</p>
-<pre><code>found = set()
-capture = cv2.VideoCapture(0)
-PATH = &quot;test.csv&quot;
-</code></pre>
-<p>然后我们要写一个死循环，我们要不停的用摄像头来采集二维码，所以我们要在死循环里来写我们的二维码采集的代码。首先我们要用刚才实例化的摄像头来采集实时的照片，然后用pyzbar的函数来解析图片里面是否有二维码</p>
-<pre><code>while(1):
-    ret,frame = capture.read()
-    test = pyzbar.decode(frame)
-</code></pre>
-<p>接着我们要查看我们采集到的二维码是不是之前采集到的，如果不是我们就存放到我们的表格文件里：</p>
-<pre><code>    for tests in test:
-        testdate = tests.data.decode('utf-8')#读取解析到的二维码信息
-        print(testdate)#输出二维码信息
-        if testdate not in found:#判断扫描到的信息是不是之前扫描到的
-            with open(PATH,'a+') as f:
-                csv_write = csv.writer(f)
-                date = [testdate]
-                csv_write.writerow(date)
-            found.add(testdate)#把没有扫描到的二维码信息存放到found变量里
-</code></pre>
-<p>我们可以使用opencv的函数来实时查看摄像头的采集情况，最后再写一个键盘监听，如果我们按下q键就让循环终止，程序停止工作，不然的话会无休止的运作下去。</p>
-<pre><code>    cv2.imshow('Test',frame)
-    if cv2.waitKey(1) == ord('q'):
-        break
-</code></pre>
-<h1 id="3完整代码">3.完整代码</h1>
-<pre><code>import cv2
-from pyzbar import pyzbar
-import csv
-found = set()
-capture = cv2.VideoCapture(0)
-PATH = &quot;test.csv&quot;
-while(1):
-    ret,frame = capture.read()
-    test = pyzbar.decode(frame)
-    for tests in test:
-        testdate = tests.data.decode('utf-8')
-        print(testdate)
-        if testdate not in found:
-            with open(PATH,'a+') as f:
-                csv_write = csv.writer(f)
-                date = [testdate]
-                csv_write.writerow(date)
-            found.add(testdate)
-    cv2.imshow('Test',frame)
-    if cv2.waitKey(1) == ord('q'):
-        break
-</code></pre>
-]]></content>
-    </entry>
-</feed>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://godstick233.github.io/post/python-shi-xian-shi-shi-er-wei-ma-shi-bie/">
+              <h3 class="post-title">
+                下一篇：Python实现实时二维码识别
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">学更多的知识，做自由的灵魂</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  YSE！ | <a class="rss" href="https://godstick233.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
