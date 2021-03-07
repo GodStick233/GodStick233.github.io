@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://godstick233.github.io</id>
     <title>LeeYin&apos;CLUB</title>
-    <updated>2021-03-03T13:03:30.309Z</updated>
+    <updated>2021-03-07T14:28:58.266Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://godstick233.github.io"/>
     <link rel="self" href="https://godstick233.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://godstick233.github.io/images/avatar.png</logo>
     <icon>https://godstick233.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, LeeYin&apos;CLUB</rights>
+    <entry>
+        <title type="html"><![CDATA[石油工程概论学习笔记]]></title>
+        <id>https://godstick233.github.io/post/IntroductiontoPetroleumEngineering/</id>
+        <link href="https://godstick233.github.io/post/IntroductiontoPetroleumEngineering/">
+        </link>
+        <updated>2021-03-07T13:52:43.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="第一章-绪论"><a href="https://godstick233.github.io/post/IntroductiontoPetroleumEngineering1-1/">第一章-绪论</a></h2>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[粒子群算法]]></title>
         <id>https://godstick233.github.io/post/li-zi-qun-suan-fa/</id>
