@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://godstick233.github.io</id>
     <title>LeeYin&apos;BLOG</title>
-    <updated>2021-03-12T16:57:28.012Z</updated>
+    <updated>2021-03-15T16:18:03.991Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://godstick233.github.io"/>
     <link rel="self" href="https://godstick233.github.io/atom.xml"/>
@@ -10,28 +10,6 @@
     <logo>https://godstick233.github.io/images/avatar.png</logo>
     <icon>https://godstick233.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, LeeYin&apos;BLOG</rights>
-    <entry>
-        <title type="html"><![CDATA[第五章-油藏动态分析方法]]></title>
-        <id>https://godstick233.github.io/post/IntroductiontoPetroleumEngineering5/</id>
-        <link href="https://godstick233.github.io/post/IntroductiontoPetroleumEngineering5/">
-        </link>
-        <updated>2021-03-12T15:40:44.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="不稳定试井可以解决哪些问题">不稳定试井可以解决哪些问题？</h3>
-<h3 id="常规试井的优缺点是什么">常规试井的优缺点是什么？</h3>
-<h3 id="现代试井的优缺点是什么">现代试井的优缺点是什么？</h3>
-<h3 id="解释表皮系数和井筒存储系数的物理意义">解释表皮系数和井筒存储系数的物理意义。</h3>
-<h3 id="画除用-gringarten-bourdet图版进行压降分析的程序框图">画除用 Gringarten-Bourdet图版进行压降分析的程序框图。</h3>
-<h3 id="油田产量递减分哪几种类型">油田产量递减分哪几种类型？</h3>
-<h3 id="产量递减率的定义是什么">产量递减率的定义是什么？</h3>
-<h3 id="水驱规律曲线有什么用途">水驱规律曲线有什么用途？</h3>
-<h3 id="如果某油田水驱曲线变平则说明什么">如果某油田水驱曲线变平则说明什么？</h3>
-<h3 id="在水驱曲线表达式-n_p-alg-w_p-lg-b-中a的物理意义是什么">在水驱曲线表达式 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mi>p</mi></msub><mo>=</mo><mi>a</mi><mo>(</mo><mi>l</mi><mi>g</mi><msub><mi>W</mi><mi>p</mi></msub><mo>+</mo><mo>−</mo><mi>l</mi><mi>g</mi><mi>b</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">N_p =a(lg W_p + - lg b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathdefault">a</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">b</span><span class="mclose">)</span></span></span></span> 中，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span>的物理意义是什么？</h3>
-<h3 id="研究产量递减规律有什么意义">研究产量递减规律有什么意义？</h3>
-<h3 id="物质平衡方程是根据什么原理推出的">物质平衡方程是根据什么原理推出的？</h3>
-<h3 id="物质平衡方程有哪些应用">物质平衡方程有哪些应用？</h3>
-<h3 id="什么叫弹性产率">什么叫弹性产率？</h3>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[石油工程概论学习笔记]]></title>
         <id>https://godstick233.github.io/post/IntroductiontoPetroleumEngineering/</id>
@@ -42,6 +20,7 @@
 <h2 id="第二章-油藏流体的物理性质"><a href="https://godstick233.github.io/post/IntroductiontoPetroleumEngineering2/">第二章-油藏流体的物理性质</a></h2>
 <h2 id="第三章-油藏岩石的物理性质"><a href="https://godstick233.github.io/post/IntroductiontoPetroleumEngineering3/">第三章-油藏岩石的物理性质</a></h2>
 <h2 id="第四章-油田开发设计基础"><a href="https://godstick233.github.io/post/IntroductiontoPetroleumEngineering4/">第四章-油田开发设计基础</a></h2>
+<h2 id="第五章-油藏动态分析方法"><a href="https://godstick233.github.io/post/IntroductiontoPetroleumEngineering5/">第五章-油藏动态分析方法</a></h2>
 ]]></content>
     </entry>
     <entry>
